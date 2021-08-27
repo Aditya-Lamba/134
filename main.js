@@ -30,7 +30,7 @@ function draw()
         {
             document.getElementById("status").innerHTML = "Status : Baby Detected";
             document.getElementById("number_of_objects").innerHTML = "Number of Objects detected are : "+ objects.length;
-            PlaySound("alarm.wav"); 
+           
 
             fill(r,g,b);
             percent = floor(objects[i].confidence * 100);
@@ -43,6 +43,7 @@ function draw()
     else
     {
         document.getElementById("status").innerHTML = "Status : Baby Not Found!";
+        PlaySound("alarm.wav"); 
     }
 
 }
