@@ -1,7 +1,7 @@
 img = "";
 status = "";
 objects = [];
-
+const music = new Audio('alarm.wav');
 
 
 function setup()
@@ -43,8 +43,9 @@ function draw()
     else
     {
         document.getElementById("status").innerHTML = "Status : Baby Not Found!";
-        PlaySound("alarm.wav"); 
-    }
+        music.play();
+        music.loop =true;
+         }
 
 }
 
